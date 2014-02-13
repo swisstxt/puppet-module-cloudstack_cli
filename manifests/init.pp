@@ -1,11 +1,11 @@
 class cloudstack_cli ( 
-  $user         = 'root',
-  $group        = $user,
-  $homedir      = "/home/${user}",
   $url          = '',
   $api_key      = '',
   $secret_key   = '',
   $environments = [],
+  $user         = 'root',
+  $group        = $user,
+  $homedir      = "/home/${user}",
 ) {
   package { 'cloudstack-cli':
     provider => 'gem',
