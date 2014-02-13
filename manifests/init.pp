@@ -11,7 +11,7 @@ class cloudstack_cli (
     provider => 'gem',
   } ->
   file { "${homedir}/.cloudstack-cli.yml":
-    content => template('cloudstack_cli/cloudstack-cli.yml'),
+    content => template('cloudstack_cli/cloudstack-cli.yml.erb'),
     mode    => '0400',
     owner   => $user,
     group   => $group,
