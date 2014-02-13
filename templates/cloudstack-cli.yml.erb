@@ -1,13 +1,13 @@
 ---
-url:         <%= @url %>
-api_key:     <%= @api_key %>
-secret_key:  <%= @secret_key %>
+url:         "<%= @url %>"
+api_key:     "<%= @api_key %>"
+secret_key:  "<%= @secret_key %>"
 
 <%- if not @environments.any? -%>
   <%- @environments.each do |name, creds| -%>
 <%= name %>:
     <%- creds.each do |key, value| -%>
-  <%= key %>: <%= value %>
+  <%= key %>: "<%= value %>"
     <%- end -%>
   <%- end -%>
 <%- end -%>
